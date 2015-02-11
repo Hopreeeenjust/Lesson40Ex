@@ -20,6 +20,7 @@ typedef NS_ENUM(NSInteger, RJStudentGenderType) {
 @property (strong, nonatomic) NSDate *dateOfBirth;
 @property (assign, nonatomic) RJStudentGenderType gender;
 @property (assign, nonatomic) NSInteger grade;
+@property (weak, nonatomic) RJStudent *bestFriend;
 
 - (void)resetAllProperties;
 @end

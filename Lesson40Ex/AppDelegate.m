@@ -7,17 +7,48 @@
 //
 
 #import "AppDelegate.h"
+#import "RJStudent.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) RJStudent *student;
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    RJStudent *student1 = [RJStudent new];
+    RJStudent *student2 = [RJStudent new];
+    RJStudent *student3 = [RJStudent new];
+    RJStudent *student4 = [RJStudent new];
+    NSArray *students = @[student1, student2, student3, student4];
+    
+    [student4 addObserver:self forKeyPath:@"firstName" options: NSKeyValueObservingOptionNew |
+     NSKeyValueObservingOptionOld context:nil];
+
+    student1.bestFriend = student2;
+    student2.bestFriend = student3;
+    student3.bestFriend = student4;
+    student4.bestFriend = student1;
+    
+    [student1 setValue:@"Alex" forKeyPath:@"bestFriend.firstName"];
+    [student1 setValue:@"Sam" forKeyPath:@"bestFriend.bestFriend.firstName"];
+    [student1 setValue:@"Nick" forKeyPath:@"bestFriend.bestFriend.bestFriend.firstName"];
+    [student1 setValue:@"John" forKeyPath:@"bestFriend.bestFriend.bestFriend.bestFriend.firstName"];
+    
+    self.student = student4;
+    
     return YES;
+}
+
+-(void)dealloc {
+    [self.student removeObserver:self forKeyPath:@"firstName"];
+}
+
+#pragma mark - Observing
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    NSLog(@"\nobserveValueForKeyPath: %@\nofObject: %@\nchange: %@", keyPath, object, change);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

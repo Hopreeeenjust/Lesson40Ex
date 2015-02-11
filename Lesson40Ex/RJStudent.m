@@ -7,15 +7,12 @@
 //
 
 #import "RJStudent.h"
-#import "ViewController.h"
 
 @interface RJStudent ()
 
 @end
 
 @implementation RJStudent
-
-#pragma mark - RJViewControllerDelegate
 
 - (void)resetAllProperties {
     [self willChangeValueForKey:@"firstName"];
