@@ -14,6 +14,9 @@
 		E09A33F01A8B683C003F23D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E09A33EF1A8B683C003F23D2 /* Images.xcassets */; };
 		E09A33F31A8B683C003F23D2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E09A33F11A8B683C003F23D2 /* LaunchScreen.xib */; };
 		E09A33FF1A8B683C003F23D2 /* Lesson40ExTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E09A33FE1A8B683C003F23D2 /* Lesson40ExTests.m */; };
+		E09A340A1A8B6868003F23D2 /* RJStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = E09A34091A8B6868003F23D2 /* RJStudent.m */; };
+		E09A340D1A8B71DA003F23D2 /* RJDatePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E09A340C1A8B71DA003F23D2 /* RJDatePickerController.m */; };
+		E09A34101A8B71F6003F23D2 /* RJGradePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E09A340F1A8B71F6003F23D2 /* RJGradePickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		E09A33F81A8B683C003F23D2 /* Lesson40ExTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lesson40ExTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E09A33FD1A8B683C003F23D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E09A33FE1A8B683C003F23D2 /* Lesson40ExTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lesson40ExTests.m; sourceTree = "<group>"; };
+		E09A34081A8B6868003F23D2 /* RJStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJStudent.h; sourceTree = "<group>"; };
+		E09A34091A8B6868003F23D2 /* RJStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJStudent.m; sourceTree = "<group>"; };
+		E09A340B1A8B71DA003F23D2 /* RJDatePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJDatePickerController.h; sourceTree = "<group>"; };
+		E09A340C1A8B71DA003F23D2 /* RJDatePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJDatePickerController.m; sourceTree = "<group>"; };
+		E09A340E1A8B71F6003F23D2 /* RJGradePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RJGradePickerController.h; sourceTree = "<group>"; };
+		E09A340F1A8B71F6003F23D2 /* RJGradePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RJGradePickerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +90,16 @@
 		E09A33E11A8B683C003F23D2 /* Lesson40Ex */ = {
 			isa = PBXGroup;
 			children = (
+				E09A34081A8B6868003F23D2 /* RJStudent.h */,
+				E09A34091A8B6868003F23D2 /* RJStudent.m */,
 				E09A33E61A8B683C003F23D2 /* AppDelegate.h */,
 				E09A33E71A8B683C003F23D2 /* AppDelegate.m */,
 				E09A33E91A8B683C003F23D2 /* ViewController.h */,
 				E09A33EA1A8B683C003F23D2 /* ViewController.m */,
+				E09A340B1A8B71DA003F23D2 /* RJDatePickerController.h */,
+				E09A340C1A8B71DA003F23D2 /* RJDatePickerController.m */,
+				E09A340E1A8B71F6003F23D2 /* RJGradePickerController.h */,
+				E09A340F1A8B71F6003F23D2 /* RJGradePickerController.m */,
 				E09A33EC1A8B683C003F23D2 /* Main.storyboard */,
 				E09A33EF1A8B683C003F23D2 /* Images.xcassets */,
 				E09A33F11A8B683C003F23D2 /* LaunchScreen.xib */,
@@ -220,8 +235,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E09A33EB1A8B683C003F23D2 /* ViewController.m in Sources */,
+				E09A340A1A8B6868003F23D2 /* RJStudent.m in Sources */,
 				E09A33E81A8B683C003F23D2 /* AppDelegate.m in Sources */,
+				E09A340D1A8B71DA003F23D2 /* RJDatePickerController.m in Sources */,
 				E09A33E51A8B683C003F23D2 /* main.m in Sources */,
+				E09A34101A8B71F6003F23D2 /* RJGradePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
